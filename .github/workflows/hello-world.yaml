@@ -7,4 +7,18 @@ jobs:
   say-hello-inline-bash:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello World"
+      - run: echo "Hello World from bash"
+        shell: bash
+
+  say-hello-inline-python:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: print("Hello World from python!")
+        shell: python
+
+  say-hello-action:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/hello-world-javascript-action@v1.2.3
+        with:
+          who-to-greet: "World from marketplace action"
