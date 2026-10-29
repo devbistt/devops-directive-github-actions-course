@@ -7,7 +7,8 @@ on:
       - main
     paths:
       - "**.lock"
-      - "**.txt"
+      - "newfolder/**.txt"
+      - "!newfolder/**.md"
 
   pull_request:
     types: [opened, reopened, ready_for_review]
