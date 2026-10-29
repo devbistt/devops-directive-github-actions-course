@@ -22,3 +22,6 @@ jobs:
       - uses: actions/hello-world-javascript-action@v1.1
         with:
           who-to-greet: "World from marketplace action"
+    needs:
+      - say-hello-inline-bash
+      - say-hello-inline-python
