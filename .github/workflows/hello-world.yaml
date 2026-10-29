@@ -2,6 +2,17 @@ name: Hello World New
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "**.lock"
+
+  pull_request:
+    types: [opened, reopened, ready_for_review]
+
+    paths:
+      - "**.yaml"
 
 jobs:
   say-hello-inline-bash:
