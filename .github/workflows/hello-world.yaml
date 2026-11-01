@@ -5,11 +5,11 @@ on:
   push:
     branches:
       - main
+      - feature/test-branch
     paths:
       - "**.lock"
       - "newfolder/**.txt"
       - "!newfolder/**.md"
-      - feature/test-branch
 
   pull_request:
     types: [opened, reopened, ready_for_review]
